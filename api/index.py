@@ -26,6 +26,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+async def root():
+    """Health check endpoint"""
+    return {"status": "ok", "message": "AI CV Analyzer API çalışıyor."}
+
+@app.get("/api/health")
+async def health():
+    """API health check"""
+    return {"status": "ok", "timestamp": str(__import__("datetime").datetime.now())}
+
 @app.get("/api/fetch-url")
 async def api_fetch_url(url: str):
     try:
