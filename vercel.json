@@ -1,14 +1,18 @@
 {
   "version": 2,
-  "buildCommand": "echo 'No build needed'",
+  "buildCommand": "echo 'Static SPA - no build needed'",
+  "cleanUrls": true,
   "rewrites": [
     {
       "source": "/api/(.*)",
       "destination": "/api/index.py"
-    },
+    }
+  ],
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/.*",
+      "dest": "/index.html",
+      "status": 200
     }
   ]
 }
