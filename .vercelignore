@@ -1,0 +1,12 @@
+app.py
+.git
+.gitignore
+.env.example
+README.md
+test_all.py
+__pycache__
+*.pyc
+.pytest_cache
+.venv
+node_modules
+*.egg-info
